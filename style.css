@@ -1,5 +1,13 @@
+:root {
+    --white: #ffffff;
+    --gray: #212121;
+    --bg-color: rgba(255, 255, 255, 0.24);
+  
+    --tran: width 0.1s linear;
+  }
+
 body{
-    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(32,27,112,1) 0%, rgba(86,121,9,1) 35%, rgba(0,212,255,1) 100%);
     color: dimgray;
     font-family: serif;
     text-align: center;
@@ -10,9 +18,12 @@ h1{
 }
 
 #container{
-    margin: 5% auto;
-    border-radius: 5px;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 4px;
     text-align: center;
+    background-color: var(--bg-color);
 }
 
 .box{
@@ -61,7 +72,8 @@ span{
     height: 75px;
     width: 125px;
     display: inline-block;
-    background: ghostwhite;
+    background: transparent;
+    border: 1px solid rgba(145, 145, 145, 0.918);
     position: relative;
     z-index: 10;
     margin-top: -50%;
@@ -70,25 +82,30 @@ span{
     animation: larger 0.5s;
     animation-fill-mode: forwards;
     box-sizing: content-box;
-    padding: 30px;
+    margin-top: 5%;
     bottom: 50px;
     top: 0;
 }
 
 button{
-    background: dimgray;
+    background: rgb(124, 124, 124);
     border-radius: 2px;
     color: ghostwhite;
     border: none;
     outline: none;
 }
 
+button:hover{
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.432);
+}
+
 button:focus{
-    background: silver;
+    background: transparent;
 }
 
 .activeBox{
-    background: silver;
+    background: rgba(0, 128, 0, 0.377);
 }
 
 @keyframes larger{
